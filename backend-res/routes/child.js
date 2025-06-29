@@ -231,25 +231,110 @@ router.delete('/:childId', authenticateToken, async (req, res) => {
 });
 
 // Add Screening Result to Child
+// Add Screening Result to Child - FIXED VERSION
 router.put('/screening/:childId', authenticateToken, async (req, res) => {
   try {
     const { childId } = req.params;
-    const screeningData = req.body;
+    console.log('=== SCREENING UPDATE DEBUG ===');
+    console.log('Child ID:', childId);
+    console.log('Request body:', JSON.stringify(req.body, null, 2));
+    console.log('User ID:', req.user._id);
+    
+    const { gameType, gameData } = req.body;
 
-    const child = await ChildProfile.findByIdAndUpdate(
-      childId,
-      { $set: { screening: screeningData, updatedAt: new Date() } },
-      { new: true }
-    );
-
-    if (!child) {
-      return res.status(404).json({ message: 'Child not found' });
+    // Validate required fields
+    if (!gameType || !gameData) {
+      console.log('Missing gameType or gameData');
+      return res.status(400).json({ 
+        message: 'Game type and game data are required',
+        received: { gameType, gameData: !!gameData }
+      });
     }
 
-    res.status(200).json({ message: 'Screening data updated successfully', child });
+    // Validate gameType
+    const validGameTypes = ['memoryMatch', 'wordAdventure', 'colorPattern', 'shapeSequence'];
+    if (!validGameTypes.includes(gameType)) {
+      console.log('Invalid game type:', gameType);
+      return res.status(400).json({ 
+        message: 'Invalid game type. Must be one of: ' + validGameTypes.join(', '),
+        received: gameType
+      });
+    }
+
+    // Check if child exists and user is authorized
+    console.log('Looking for child with ID:', childId, 'and mother ID:', req.user._id);
+    
+    const child = await ChildProfile.findOne({
+      _id: childId,
+      motherId: req.user._id
+    });
+
+    if (!child) {
+      console.log('Child not found or not authorized');
+      return res.status(404).json({ 
+        message: 'Child not found or not authorized',
+        childId,
+        userId: req.user._id
+      });
+    }
+
+    console.log('Child found:', child.fullName);
+    console.log('Current screening data:', child.screening);
+
+    // FIXED: Initialize screening object if it doesn't exist
+    if (!child.screening) {
+      child.screening = {};
+    }
+
+    // FIXED: Update only the specific game field, preserving others
+    child.screening[gameType] = gameData;
+    child.updatedAt = new Date();
+
+    // FIXED: Use save() instead of findByIdAndUpdate to ensure proper validation
+    const updatedChild = await child.save();
+
+    console.log('Update successful');
+    console.log('Updated screening data:', updatedChild.screening);
+
+    res.status(200).json({ 
+      message: `${gameType} screening data updated successfully`, 
+      child: updatedChild,
+      debug: {
+        gameType,
+        dataReceived: Object.keys(gameData),
+        allScreeningGames: Object.keys(updatedChild.screening || {})
+      }
+    });
+
   } catch (error) {
-    console.error('Error updating screening:', error);
-    res.status(500).json({ message: 'Server error' });
+    console.error('=== SCREENING UPDATE ERROR ===');
+    console.error('Error details:', error);
+    console.error('Error name:', error.name);
+    console.error('Error message:', error.message);
+    
+    if (error.name === 'ValidationError') {
+      console.error('Validation errors:', error.errors);
+      const validationErrors = Object.values(error.errors).map(err => err.message);
+      return res.status(400).json({ 
+        message: 'Validation error', 
+        details: validationErrors,
+        error: error.message
+      });
+    }
+    
+    if (error.name === 'CastError') {
+      console.error('Cast error - likely invalid ObjectId');
+      return res.status(400).json({ 
+        message: 'Invalid child ID format',
+        error: error.message
+      });
+    }
+    
+    res.status(500).json({ 
+      message: 'Server error',
+      error: error.message,
+      type: error.name
+    });
   }
 });
 
@@ -334,8 +419,8 @@ Full Name: ${child.fullName}
 Gender: ${child.gender}
 Age: ${age} years
 Date of Birth: ${moment(child.dateOfBirth).format("LL")}
-Health History: ${child.healthHistory?.length > 0 ? child.healthHistory.join(", ") : "No major health concerns reported"}
-Learning Concerns: ${child.learningConcerns?.length > 0 ? child.learningConcerns.join(", ") : "No specific learning concerns reported"}
+Health History: ${child.healthHistory?.length > 0 ? child.healthHistory.map(h => h.condition).join(", ") : "No major health concerns reported"}
+Learning Concerns: ${child.learningConcerns?.length > 0 ? child.learningConcerns.map(l => l.concern).join(", ") : "No specific learning concerns reported"}
 
 **Screening Methods Explanation:**
 1. Memory Match: Evaluates short-term memory, symbol recognition, and visual discrimination, useful for identifying dyslexia-related symptoms.
@@ -346,44 +431,57 @@ Learning Concerns: ${child.learningConcerns?.length > 0 ? child.learningConcerns
 **Screening Results:**
 
 Memory Match (Dyslexia Screening):
-${dyslexiaGame ? `Score: ${dyslexiaGame.score || 'N/A'}, Matches: ${dyslexiaGame.matches || 'N/A'}/8, Time: ${dyslexiaGame.timeTaken || 'N/A'} seconds` : 'No data available'}
+${child.screening?.memoryMatch ? 
+  `Score: ${child.screening.memoryMatch.finalScore ?? 'N/A'}, Pairs Found: ${child.screening.memoryMatch.pairsFound ?? 'N/A'}, Time: ${child.screening.memoryMatch.timeUsed ?? 'N/A'} seconds` 
+  : 'No data available'}
 
 Word Adventure (ADHD Screening):
-${adhdGame ? `Score: ${adhdGame.score || 'N/A'}, Misses: ${adhdGame.misses || 'N/A'}, Reaction Time: ${adhdGame.reactionTime || 'N/A'} ms` : 'No data available'}
+${child.screening?.wordAdventure ? 
+  `Score: ${child.screening.wordAdventure.totalScore ?? 'N/A'}, Accuracy: ${child.screening.wordAdventure.accuracy ?? 'N/A'}%, Correct Patterns: ${child.screening.wordAdventure.correctPatternsFound ?? 'N/A'}, Time: ${child.screening.wordAdventure.timeUsed ?? 'N/A'} seconds`
+  : 'No data available'}
 
 Color Pattern (Dysgraphia Screening):
-${dysgraphiaGame ? `Patterns: ${dysgraphiaGame.completedPatterns || 'N/A'}, Accuracy: ${dysgraphiaGame.accuracy || 'N/A'}%, Time: ${dysgraphiaGame.timeTaken || 'N/A'} seconds` : 'No data available'}
+${child.screening?.colorPattern ? 
+  `Score: ${child.screening.colorPattern.totalScore ?? 'N/A'}, Rounds Completed: ${child.screening.colorPattern.roundsCompleted ?? 'N/A'}, Best Streak: ${child.screening.colorPattern.bestStreak ?? 'N/A'}, Time: ${child.screening.colorPattern.timeUsed ?? 'N/A'} seconds`
+  : 'No data available'}
 
 Shape Pattern (Dyscalculia Screening):
-${dyscalculiaGame ? `Questions: ${dyscalculiaGame.questionsAttempted || 'N/A'}, Correct: ${dyscalculiaGame.correctAnswers || 'N/A'}, Reasoning Time: ${dyscalculiaGame.reasoningTime || 'N/A'} seconds` : 'No data available'}
+${child.screening?.shapeSequence ? 
+  `Score: ${child.screening.shapeSequence.totalScore ?? 'N/A'}, Levels Completed: ${child.screening.shapeSequence.levelsCompleted ?? 'N/A'}, Correct Answers: ${child.screening.shapeSequence.correctAnswers ?? 'N/A'}, Time: ${child.screening.shapeSequence.timeUsed ?? 'N/A'} seconds`
+  : 'No data available'}
 
 Please provide a comprehensive, parent-friendly report with the following sections:
 
-**Dyslexia Screening Results**
+**Dyslexia Screening Results**  
 **Dysgraphia Screening Results**  
-**Dyscalculia Screening Results**
-**ADHD Screening Results**
+**Dyscalculia Screening Results**  
+**ADHD Screening Results**  
 **Overall Assessment and Recommendations**
 
 Focus on providing supportive guidance, avoid medical diagnoses, and include practical next steps for parents.
 `;
 
+console.log(`the prompt is : ${prompt}`)
     // Generate content using Gemini
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(prompt);
     const aiText = await result.response.text();
 
+
+
     return res.status(200).json({
-      success: true,
-      message: "Report generated successfully",
-      report: aiText,
-      patientInfo: {
-        name: child.fullName,
-        age,
-        dateOfBirth: child.dateOfBirth,
-        generatedAt: new Date().toISOString()
-      }
-    });
+  success: true,
+  message: "Report generated successfully",
+  report: aiText,
+  patientInfo: {
+    name: child.fullName,
+    age,
+    dateOfBirth: child.dateOfBirth,
+    generatedAt: new Date().toISOString(),
+    isChild: true // ✅ ADD THIS
+  }
+});
+
 
   } catch (err) {
     console.error("Child Report Generation Error:", err);

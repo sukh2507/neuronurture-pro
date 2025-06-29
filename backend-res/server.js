@@ -16,7 +16,9 @@ const doctorRoutes = require('./routes/doctor');
 const consultationroutes = require('./routes/consultation');
 const chatroutes = require('./routes/neuroai');
 const userRoutes = require('./routes/user');
-const messageRoutes = require('./routes/message');
+const mythRealityRoutes = require('./routes/mythreality');
+const messageRoutes = require('./routes/messages'); 
+
 // Initialize app and server
 const app = express();
 const server = http.createServer(app); // 🔥 Replace app.listen with this
@@ -55,7 +57,8 @@ app.use('/api/doctor', doctorRoutes);
 app.use('/api/consultation', consultationroutes);
 app.use('/api/neuroai', chatroutes);
 app.use('/api/users', userRoutes);
-app.use('/api/messages', messageRoutes);
+app.use('/api/myths', mythRealityRoutes);
+app.use('/api/messages',messageRoutes)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -76,9 +79,6 @@ const io = new Server(server, {
   }
 });
 
-// Register socket handlers from external file
-const registerMessageHandlers = require('./sockets/messageSocket');
-registerMessageHandlers(io);
 
 // Start server
 const PORT = process.env.PORT || 5000;

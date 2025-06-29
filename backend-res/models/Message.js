@@ -1,38 +1,49 @@
 const mongoose = require('mongoose');
 
-const MessageSchema = new mongoose.Schema({
-  senderId: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    refPath: 'senderModel'
+const messageSchema = new mongoose.Schema({
+  doctorId: {
+    type: String, // Changed to String to avoid reference issues
+    required: true
   },
-  senderModel: {
-    type: String,
-    required: true,
-    enum: ['MotherProfile', 'Doctor']
-  },
-  receiverId: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    refPath: 'receiverModel'
-  },
-  receiverModel: {
-    type: String,
-    required: true,
-    enum: ['MotherProfile', 'Doctor']
+  motherId: {
+    type: String, // Changed to String to avoid reference issues
+    required: true
   },
   content: {
     type: String,
+    required: true,
+    trim: true,
+    maxLength: 1000 // Adjust as needed
+  },
+  senderRole: {
+    type: String,
+    enum: ['doctor', 'mother'],
     required: true
   },
-  sentAt: {
+  seen: {
+    type: Boolean,
+    default: false
+  },
+  createdAt: {
     type: Date,
     default: Date.now
   },
-  seenByDoctor: {
-    type: Boolean,
-    default: false
+  updatedAt: {
+    type: Date,
+    default: Date.now
   }
-}, { timestamps: true });
+});
 
-module.exports = mongoose.model('Message', MessageSchema);
+// Update the updatedAt field before saving
+messageSchema.pre('save', function(next) {
+  this.updatedAt = Date.now();
+  next();
+});
+
+// Index for efficient querying
+messageSchema.index({ doctorId: 1, motherId: 1, createdAt: 1 });
+messageSchema.index({ seen: 1, senderRole: 1 });
+
+const Message = mongoose.model('Message', messageSchema);
+
+module.exports = Message;

@@ -63,6 +63,27 @@ router.post('/choice', authenticateToken, async (req, res) => {
   }
 });
 
+// Get mother profile by user ID (FIXED - no duplicate routes)
+router.get('/by-user/:userId', async (req, res) => {
+  const { userId } = req.params;
+  
+  console.log('Fetching mother profile for userId:', userId);
+  
+  try {
+    const mother = await MotherProfile.findOne({ userId });
+    console.log('Found mother profile:', mother ? 'Yes' : 'No');
+
+    if (!mother) {
+      return res.status(404).json({ error: 'Mother profile not found' });
+    }
+
+    res.json(mother);
+  } catch (err) {
+    console.error('Error fetching mother profile by userId:', err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // Get user's choice history (protected route)
 router.get('/choice', authenticateToken, async (req, res) => {
   try {
@@ -178,7 +199,7 @@ router.post('/register', authenticateToken, async (req, res) => {
   }
 });
 
-// Get Mother Profile
+// Get Mother Profile (authenticated user's own profile)
 router.get('/profile', authenticateToken, async (req, res) => {
   try {
     // Ensure only mothers can access mother profiles
@@ -200,16 +221,14 @@ router.get('/profile', authenticateToken, async (req, res) => {
   }
 });
 
- // ✅ Get mother profile by user ID (used by doctors)
+// Get mother profile by ID (used by doctors) - FIXED route
 router.get('/profile/:id', authenticateToken, async (req, res) => {
   try {
-    const userId = req.params.id;
+    const profileId = req.params.id;
+    console.log('Fetching mother profile by ID:', profileId);
 
-    const motherProfile = await MotherProfile.findOne({
-  $or: [{ userId: userId }, { _id: userId }]
-})
-.select('fullName age pregnancyStage pregnancyWeeks dueDate familySupport previousMentalHealthHistory currentMentalHealthConcerns currentChildren moodTracking createdAt updatedAt');
-
+    const motherProfile = await MotherProfile.findById(profileId)
+      .select('fullName age pregnancyStage pregnancyWeeks dueDate familySupport previousMentalHealthHistory currentMentalHealthConcerns currentChildren moodTracking createdAt updatedAt');
 
     if (!motherProfile) {
       return res.status(404).json({ error: 'Mother profile not found' });
@@ -232,9 +251,9 @@ router.get('/children-count', authenticateToken, async (req, res) => {
     const motherProfiles = await MotherProfile.find({}, 'currentChildren');
 
     let totalChildren = 0;
-for (const profile of motherProfiles) {
-  totalChildren += profile.currentChildren?.length || 0;
-}
+    for (const profile of motherProfiles) {
+      totalChildren += profile.currentChildren?.length || 0;
+    }
 
     res.status(200).json({ totalChildren });
 
@@ -243,8 +262,6 @@ for (const profile of motherProfiles) {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-
-
 
 // Update Mother Profile
 router.put('/profile', authenticateToken, async (req, res) => {
@@ -320,7 +337,8 @@ router.get('/children', authenticateToken, async (req, res) => {
   }
 });
 
-  router.post('/generate-report/:id', async (req, res) => {
+// Generate report for mother
+router.post('/generate-report/:id', async (req, res) => {
   try {
     const patientId = req.params.id;
     
@@ -405,12 +423,6 @@ Please ensure the response is personalized for ${fullName}, considering her age 
     const result = await model.generateContent(prompt);
     const generatedReport = await result.response.text();
     console.log(generatedReport)
-    // Save the report to database if needed
-    // await ReportModel.create({
-    //   motherId: patientId,
-    //   report: generatedReport,
-    //   generatedAt: new Date()
-    // });
 
     res.json({
       success: true,
@@ -430,34 +442,6 @@ Please ensure the response is personalized for ${fullName}, considering her age 
     res.status(500).json({
       success: false,
       message: 'Failed to generate report',
-      error: error.message
-    });
-  }
-});
-
-// GET /api/mother/profile/:id (if you need this route)
-router.get('/profile/:id', async (req, res) => {
-  try {
-    const patientId = req.params.id;
-    const motherProfile = await MotherProfile.findById(patientId);
-    
-    if (!motherProfile) {
-      return res.status(404).json({
-        success: false,
-        message: 'Mother profile not found'
-      });
-    }
-
-    res.json({
-      success: true,
-      data: motherProfile
-    });
-
-  } catch (error) {
-    console.error('Error fetching mother profile:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to fetch mother profile',
       error: error.message
     });
   }

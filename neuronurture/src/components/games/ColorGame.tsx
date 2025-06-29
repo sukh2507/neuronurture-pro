@@ -132,7 +132,8 @@ const ColorGame = ({ onComplete, childId }: ColorGameProps) => {
   const results = getResults();
 
   const screeningData = {
-    colorPattern: {
+    gameType: 'colorPattern',  // Backend expects this field
+    gameData: {
       totalScore: results.score,
       roundsCompleted: results.roundsCompleted,
       bestStreak: results.maxStreak,

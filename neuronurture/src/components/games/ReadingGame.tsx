@@ -146,7 +146,8 @@ const ReadingGame = ({ onComplete, childId }: ReadingGameProps) => {
   const results = getResults();
 
   const screeningData = {
-    wordAdventure: {
+    gameType: 'wordAdventure',  // Backend expects this field
+    gameData: {
       totalScore: results.score,
       accuracy: results.accuracy,
       correctPatternsFound: results.correctAnswers,

@@ -143,7 +143,8 @@ const PatternGame = ({ onComplete, childId }: PatternGameProps) => {
   const results = getResults();
 
   const screeningData = {
-    shapeSequence: {
+     gameType: 'shapeSequence',  // Backend expects this field
+    gameData: {
       totalScore: results.score,
       levelsCompleted: results.levelsCompleted,
       correctAnswers: results.correctAnswers,

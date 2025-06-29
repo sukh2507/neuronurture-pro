@@ -123,8 +123,10 @@ const MemoryGame = ({ onComplete, childId }: MemoryGameProps) => {
 const handleSave = async () => {
   const results = getResults();
 
+  // FIXED: Structure data to match backend expectations
   const screeningData = {
-    memoryMatch: {
+    gameType: 'memoryMatch',  // Backend expects this field
+    gameData: {               // Backend expects this field
       finalScore: results.score,
       totalMoves: results.moves,
       pairsFound: results.matches,

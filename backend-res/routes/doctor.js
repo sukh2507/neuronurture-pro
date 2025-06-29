@@ -315,6 +315,39 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.get('/by-user/:userId', auth, async (req, res) => {
+  try {
+    const { userId } = req.params;
+    
+    console.log('Fetching doctor profile for userId:', userId);
+    
+    // Find doctor profile by userId field
+    const doctorProfile = await DoctorProfile.findOne({ userId: userId })
+      .populate('userId', 'fullName email profilePicture');
+    
+    if (!doctorProfile) {
+      return res.status(404).json({
+        success: false,
+        error: 'Doctor profile not found for this user'
+      });
+    }
+    
+    console.log('Doctor profile found:', doctorProfile._id);
+    
+    res.json({
+      success: true,
+      data: doctorProfile
+    });
+    
+  } catch (error) {
+    console.error('Error fetching doctor profile by userId:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to fetch doctor profile',
+      details: error.message
+    });
+  }
+});
 
 // POST route to add a patient to doctor's care
 router.post('/patients/:doctorId', auth, async (req, res) => {
@@ -408,6 +441,21 @@ router.get('/profile/user/:userId', auth, async (req, res) => {
   } catch (error) {
     console.error('Error fetching doctor profile:', error);
     res.status(500).json({ message: 'Server error' });
+  }
+});
+
+router.get('/profile-id/:userId', auth, async (req, res) => {
+  try {
+    const doctorProfile = await DoctorProfile.findOne({ userId: req.params.userId });
+
+    if (!doctorProfile) {
+      return res.status(404).json({ success: false, message: 'Doctor profile not found' });
+    }
+
+    res.json({ success: true, doctorId: doctorProfile._id });
+  } catch (error) {
+    console.error('Error fetching doctor profile ID:', error);
+    res.status(500).json({ success: false, message: 'Server error' });
   }
 });
 

@@ -1,0 +1,1209 @@
+{
+  "myths_vs_reality": [
+    {
+      "category": "Pregnancy",
+      "myth": "You can't exercise during pregnancy.",
+      "reality": "Moderate exercise is generally safe and beneficial during pregnancy unless contraindicated by your doctor.",
+      "source": "ACOG (American College of Obstetricians and Gynecologists)"
+    },
+    {
+      "category": "ADHD",
+      "myth": "ADHD is caused by bad parenting.",
+      "reality": "ADHD is a neurodevelopmental disorder with strong genetic components, not caused by parenting style.",
+      "source": "CDC (Centers for Disease Control and Prevention)"
+    },
+    {
+      "category": "Dyslexia",
+      "myth": "Dyslexia is just seeing letters backwards.",
+      "reality": "Dyslexia is a language processing disorder affecting reading, writing, and spelling in various ways, not just letter reversal.",
+      "source": "International Dyslexia Association"
+    },
+    {
+      "category": "Parental Mental Health",
+      "myth": "Parents of children with learning disorders should always put their child's needs before their own.",
+      "reality": "Parental self-care is essential; neglecting mental health harms both parent and child's wellbeing.",
+      "source": "American Psychological Association"
+    },
+    {
+      "category": "Pregnancy",
+      "myth": "You're eating for two during pregnancy.",
+      "reality": "Most women only need about 300 extra calories per day in the 2nd and 3rd trimesters.",
+      "source": "Mayo Clinic"
+    },
+    {
+      "category": "ADHD",
+      "myth": "ADHD medications will turn children into zombies.",
+      "reality": "Properly prescribed and monitored medications help regulate brain chemistry without personality changes.",
+      "source": "CHADD (Children and Adults with ADHD)"
+    },
+    {
+      "category": "Dyslexia",
+      "myth": "Dyslexic children are less intelligent.",
+      "reality": "Dyslexia is unrelated to intelligence; many dyslexics have average or above-average IQ.",
+      "source": "Yale Center for Dyslexia & Creativity"
+    },
+    {
+      "category": "Parental Mental Health",
+      "myth": "Only mothers experience mental health challenges with special needs children.",
+      "reality": "Fathers experience similar stress levels but may express it differently or seek help less often.",
+      "source": "Journal of Pediatric Psychology"
+    },
+    {
+      "category": "Pregnancy",
+      "myth": "Morning sickness only happens in the morning.",
+      "reality": "Nausea can occur at any time of day and varies greatly among pregnant women.",
+      "source": "American Pregnancy Association"
+    },
+    {
+      "category": "ADHD",
+      "myth": "Children with ADHD will outgrow it.",
+      "reality": "About 60% of children with ADHD continue to have symptoms into adulthood.",
+      "source": "National Institute of Mental Health"
+    },
+    {
+      "category": "Dyslexia",
+      "myth": "Dyslexia can be cured with more reading practice.",
+      "reality": "Dyslexia is lifelong, but proper interventions can significantly improve reading skills.",
+      "source": "International Dyslexia Association"
+    },
+    {
+      "category": "Parental Mental Health",
+      "myth": "Parents should feel guilty if they need respite care for their special needs child.",
+      "reality": "Respite care is a healthy way to prevent burnout and maintain family wellbeing.",
+      "source": "National Alliance on Mental Illness"
+    },
+    {
+      "category": "Pregnancy",
+      "myth": "You can predict the baby's gender based on belly shape.",
+      "reality": "Belly shape is determined by muscle tone, baby's position, and body type, not gender.",
+      "source": "ACOG"
+    },
+    {
+      "category": "ADHD",
+      "myth": "ADHD is overdiagnosed.",
+      "reality": "While awareness has increased, many children (especially girls and minorities) remain undiagnosed.",
+      "source": "Journal of the American Academy of Child & Adolescent Psychiatry"
+    },
+    {
+      "category": "Dyslexia",
+      "myth": "Dyslexia is rare.",
+      "reality": "Dyslexia affects about 15-20% of the population to varying degrees.",
+      "source": "National Institute of Child Health and Human Development"
+    },
+    {
+      "category": "Parental Mental Health",
+      "myth": "Therapy is only for parents who can't cope.",
+      "reality": "Therapy is a proactive tool for all parents of children with learning differences.",
+      "source": "American Psychological Association"
+    },
+    {
+      "category": "Pregnancy",
+      "myth": "Heartburn means your baby will have lots of hair.",
+      "reality": "Heartburn is caused by hormonal changes and physical pressure, not fetal hair.",
+      "source": "Journal of Birth"
+    },
+    {
+      "category": "ADHD",
+      "myth": "Sugar causes ADHD.",
+      "reality": "No scientific evidence links sugar to ADHD, though diet may affect symptoms.",
+      "source": "Journal of the American Medical Association"
+    },
+    {
+      "category": "Dyslexia",
+      "myth": "Dyslexics can't be good at spelling if they try harder.",
+      "reality": "Dyslexia affects phonological processing; effort alone doesn't overcome this neurological difference.",
+      "source": "British Dyslexia Association"
+    },
+    {
+      "category": "Parental Mental Health",
+      "myth": "Parents should never show frustration in front of their special needs child.",
+      "reality": "Appropriate expression of emotions models healthy coping when done constructively.",
+      "source": "Child Mind Institute"
+    }
+    ,
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Flying during pregnancy will cause a miscarriage.",
+      "reality": "Air travel is generally safe until 36 weeks for uncomplicated pregnancies; cosmic radiation exposure is minimal.",
+      "source": "ACOG Committee Opinion No. 746"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Having sex can hurt the baby.",
+      "reality": "Intercourse is safe in normal pregnancies; the fetus is well-protected by amniotic fluid and the uterus.",
+      "source": "Mayo Clinic Guide to a Healthy Pregnancy"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "All medications are dangerous during pregnancy.",
+      "reality": "Many medications are pregnancy-safe; untreated conditions often pose greater risks than properly managed treatments.",
+      "source": "MotherToBaby"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Morning sickness means your pregnancy is healthier.",
+      "reality": "While nausea is common, its absence doesn't indicate problems; 20-30% of healthy pregnancies have no nausea.",
+      "source": "JAMA Internal Medicine 2016"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You shouldn't lift your arms above your head or the umbilical cord will wrap around the baby's neck.",
+      "reality": "Arm movements don't affect the umbilical cord; nuchal cords occur randomly in 20-30% of pregnancies.",
+      "source": "Journal of Ultrasound in Medicine"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Hot tubs are completely off-limits.",
+      "reality": "Brief warm (not hot) soaks (<100°F for <10 mins) are generally safe after first trimester.",
+      "source": "ACOG Practice Bulletin No. 189"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Bed rest prevents preterm labor.",
+      "reality": "Bed rest isn't proven effective and may increase risks of blood clots and muscle loss.",
+      "source": "Obstetrics & Gynecology 2019"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You can't get pregnant while breastfeeding.",
+      "reality": "Lactational amenorrhea method only works under strict conditions (≤6mo postpartum, exclusive feeding, no period return).",
+      "source": "CDC Contraception Guidelines"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Caffeine causes birth defects.",
+      "reality": "Moderate caffeine (<200mg/day) isn't linked to defects but high intake may increase miscarriage risk.",
+      "source": "NIH Pregnancy & Caffeine Study"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "All fish should be avoided due to mercury.",
+      "reality": "Low-mercury fish (salmon, shrimp) provide essential omega-3s; only high-mercury fish (swordfish, tilefish) should be avoided.",
+      "source": "FDA/EPA Pregnancy Fish Guidelines"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Bleeding always means miscarriage.",
+      "reality": "Light spotting occurs in 20% of healthy pregnancies; always report bleeding but don't assume the worst.",
+      "source": "American Pregnancy Association"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You can't dye your hair while pregnant.",
+      "reality": "Modern hair dyes have minimal systemic absorption; ensure good ventilation and avoid scalp contact if concerned.",
+      "source": "Journal of Obstetrics and Gynaecology"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Pregnant women shouldn't get vaccines.",
+      "reality": "Flu and Tdap vaccines are strongly recommended; only live vaccines (MMR, varicella) are contraindicated.",
+      "source": "CDC Vaccine Pregnancy Guidelines"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Stress will cause miscarriage.",
+      "reality": "Normal stress doesn't cause miscarriage though extreme trauma/chronic stress may slightly increase risks.",
+      "source": "Journal of Endocrinology"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You can predict labor by how the baby is carrying.",
+      "reality": "Fetal position doesn't reliably predict labor onset; even engaged babies may not come for weeks.",
+      "source": "Obstetric Medicine"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Ultrasounds can harm the baby.",
+      "reality": "Diagnostic ultrasounds use non-ionizing radiation with no proven harmful effects at clinical intensities.",
+      "source": "FDA Ultrasound Safety Information"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You shouldn't exercise in the third trimester.",
+      "reality": "Regular exercise can continue until delivery if comfortable, though intensity may need adjustment.",
+      "source": "ACOG Committee Opinion No. 804"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Pregnant women shouldn't sleep on their back.",
+      "reality": "While left-side sleeping is ideal, occasional back sleeping is fine until it becomes uncomfortable.",
+      "source": "British Journal of Obstetrics"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "You can't have dental work done.",
+      "reality": "Dental cleanings and necessary procedures are safe; local anesthetics without epinephrine are preferred.",
+      "source": "Journal of the American Dental Association"
+    },
+    {
+      "category": "Pregnancy Risk",
+      "myth": "Heart rate predicts the baby's gender.",
+      "reality": "Fetal heart rate varies normally between 110-160bpm regardless of sex; no predictive value.",
+      "source": "Fetal Diagnosis and Therapy"
+    },
+
+    {
+      "category": "ADHD Treatment",
+      "myth": "Medication is the only effective ADHD treatment.",
+      "reality": "Combined approaches (medication + behavioral therapy + accommodations) work best for most individuals.",
+      "source": "MTA Cooperative Group Study"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Stimulant medications are addictive for children.",
+      "reality": "Properly prescribed stimulants don't cause addiction in ADHD kids; they reduce later substance abuse risks by 50%.",
+      "source": "American Journal of Psychiatry"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "ADHD medications stunt growth.",
+      "reality": "Some children experience temporary slowed growth (1-2cm) but typically catch up by adulthood.",
+      "source": "Journal of Child Psychology and Psychiatry"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Medication changes personality.",
+      "reality": "Effective medication helps regulate attention/impulses without altering core personality traits.",
+      "source": "CHADD Clinical Guidelines"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "You should take drug holidays on weekends.",
+      "reality": "Consistent medication often helps with non-academic functioning (social skills, family interactions).",
+      "source": "Journal of Attention Disorders"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Alternative diets (sugar-free, Feingold) cure ADHD.",
+      "reality": "No diet eliminates ADHD though some children may have individual food sensitivities affecting behavior.",
+      "source": "AAP Clinical Report"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Neurofeedback is a proven standalone treatment.",
+      "reality": "While promising, neurofeedback isn't FDA-approved as primary treatment and requires more research.",
+      "source": "FDA Neurofeedback Guidance"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Medication doses should be based on weight alone.",
+      "reality": "Metabolism and brain chemistry vary widely; optimal dosing requires careful individual titration.",
+      "source": "Journal of Clinical Psychiatry"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Adults respond to the same treatments as children.",
+      "reality": "Adults often need different medication formulations/doses and coping strategies for workplace challenges.",
+      "source": "World Federation of ADHD Guidelines"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Once you find an effective medication, you're set for life.",
+      "reality": "Needs change with development, hormones, and life circumstances requiring periodic reassessment.",
+      "source": "ADHD Across the Lifespan"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Behavioral therapy doesn't work for ADHD.",
+      "reality": "Behavioral interventions are evidence-based, especially when combined with medication for children <6.",
+      "source": "CDC ADHD Treatment Guidelines"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Medication fixes everything - no other supports needed.",
+      "reality": "Most individuals still benefit from organizational strategies, accommodations, and skill-building.",
+      "source": "Journal of Learning Disabilities"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "If one stimulant doesn't work, none will.",
+      "reality": "Response varies by formulation (methylphenidate vs amphetamine) and delivery system (XR, LA, patch).",
+      "source": "Psychopharmacology Bulletin"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Non-stimulants are always safer than stimulants.",
+      "reality": "Each medication class has different risk profiles; safety depends on individual health factors.",
+      "source": "CNS Drugs Review"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Adults can't start ADHD medication if not treated as kids.",
+      "reality": "Adults can begin treatment at any age if diagnosed; many weren't identified in childhood.",
+      "source": "American Journal of Psychiatry"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Medication loses effectiveness over time.",
+      "reality": "Tolerance is rare when properly dosed; perceived loss of effect often reflects new developmental demands.",
+      "source": "Journal of Clinical Psychopharmacology"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Video games improve attention so they're good for ADHD.",
+      "reality": "While games capture attention, they don't generalize to real-world focus and may exacerbate dysregulation.",
+      "source": "Pediatrics Digital Media Guidelines"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "Omega-3 supplements replace medication.",
+      "reality": "Omega-3s may provide modest support but aren't comparable to first-line treatments for core symptoms.",
+      "source": "Journal of the Academy of Nutrition and Dietetics"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "All ADHD medications cause weight loss.",
+      "reality": "While decreased appetite is common initially, effects often stabilize; some non-stimulants may cause weight gain.",
+      "source": "International Journal of Obesity"
+    },
+    {
+      "category": "ADHD Treatment",
+      "myth": "You can't take ADHD meds with antidepressants.",
+      "reality": "Many combinations are safe and common; careful monitoring helps manage potential interactions.",
+      "source": "Psychopharmacology Combined Treatments"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Colored overlays or lenses cure dyslexia.",
+      "reality": "While some find overlays helpful for reading comfort, they don't address phonological processing deficits.",
+      "source": "American Academy of Ophthalmology"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics just need to read more to improve.",
+      "reality": "Structured, explicit phonics instruction is required - not just increased reading time.",
+      "source": "National Reading Panel Report"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Brain training games can rewire the dyslexic brain.",
+      "reality": "No evidence shows commercial brain games significantly improve reading; targeted literacy interventions do.",
+      "source": "Frontiers in Psychology"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexia interventions only work for young children.",
+      "reality": "Older students and adults can make significant gains with appropriate instruction.",
+      "source": "Annals of Dyslexia"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "All reading programs help dyslexia equally.",
+      "reality": "Only systematic, multisensory structured language programs (Orton-Gillingham, Wilson) are evidence-based.",
+      "source": "What Works Clearinghouse"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Audio books are a crutch that prevent learning to read.",
+      "reality": "Audio books provide access to content while reading skills develop, supporting vocabulary and knowledge.",
+      "source": "International Dyslexia Association"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics should always sound out words.",
+      "reality": "A balanced approach (phonics + sight words + context) is most effective after basic decoding is mastered.",
+      "source": "Journal of Educational Psychology"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Spelling doesn't matter with spellcheck available.",
+      "reality": "Understanding spelling patterns improves reading fluency and written expression quality.",
+      "source": "Dyslexia Research Institute"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Cursive writing is easier for dyslexics.",
+      "reality": "Some find cursive helpful, others don't; individual preference should guide writing instruction.",
+      "source": "British Dyslexia Association"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics can't learn foreign languages.",
+      "reality": "While challenging, dyslexics can succeed with immersive, multisensory language instruction.",
+      "source": "Modern Language Journal"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Extra time accommodations give unfair advantages.",
+      "reality": "Extra time simply allows dyslexics to demonstrate their knowledge without being hindered by slow decoding.",
+      "source": "Journal of Learning Disabilities"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexia only affects reading, not math.",
+      "reality": "Many dyslexics struggle with math word problems and memorizing math facts due to language aspects.",
+      "source": "National Center for Learning Disabilities"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Vision therapy can correct dyslexia.",
+      "reality": "Dyslexia is a language-processing issue, not a vision problem; vision therapy doesn't address core deficits.",
+      "source": "AAP Joint Statement on Vision Therapy"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics should avoid writing assignments.",
+      "reality": "With appropriate supports (graphic organizers, assistive tech), writing is an essential skill to develop.",
+      "source": "Council for Learning Disabilities"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Typing eliminates handwriting difficulties.",
+      "reality": "While helpful, keyboarding requires explicit instruction; handwriting remains important for quick notes.",
+      "source": "Journal of Occupational Therapy"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics can't be good at standardized tests.",
+      "reality": "With proper accommodations and preparation, many dyslexics excel on standardized assessments.",
+      "source": "College Board Research"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Interventions should focus only on reading.",
+      "reality": "Comprehensive approaches address reading, writing, spelling, and self-advocacy skills.",
+      "source": "IDA Structured Literacy"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Dyslexics outgrow their difficulties.",
+      "reality": "While skills improve with intervention, dyslexia is lifelong; for dyslexia is lifelong; adults need strategies for work environments.",
+      "source": "British Psychological Society"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "All dyslexics benefit from the same font.",
+      "reality": "While some prefer OpenDyslexic font, individual preferences vary; no font works for everyone.",
+      "source": "Dyslexia Journal"
+    },
+    {
+      "category": "Dyslexia Interventions",
+      "myth": "Early intervention guarantees grade-level reading.",
+   "reality": "While early help is crucial, progress depends on severity, intervention quality, and individual factors.",
+      "source": "Journal of Learning Disabilities"
+    },
+
+  {
+      "category": "Parental Depression",
+      "myth": "Only mothers get depressed about child's learning struggles.",
+      "reality": "Fathers experience comparable rates of depression but are less likely to report or seek help.",
+      "source": "Journal of Family Psychology"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Feeling depressed means you're a bad parent.",
+      "reality": "Depression is an illness, not a moral failing; good parents can struggle with mental health.",
+      "source": "National Alliance on Mental Illness"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Antidepressants will make you numb to your child's needs.",
+      "reality": "Properly managed medications typically improve responsiveness by alleviating depressive symptoms.",
+      "source": "Journal of Clinical Psychiatry"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Therapy is selfish when you should focus on your child.",
+      "reality": "Parental mental health treatment directly benefits child outcomes and family functioning.",
+      "source": "American Academy of Pediatrics"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "You should hide your sadness from your child.",
+      "reality": "Modeling healthy emotional expression (within reason) teaches coping skills.",
+      "source": "Child Development Perspectives"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Parental depression doesn't affect children's learning.",
+      "reality": "Maternal depression is linked to poorer academic outcomes independent of child's learning disorder.",
+      "source": "Journal of Child Psychology"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Support groups are just for complaining.",
+      "reality": "Evidence shows support groups reduce isolation and provide practical coping strategies.",
+      "source": "Community Mental Health Journal"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "If you're functional at work, you can't be that depressed.",
+      "reality": "High-functioning depression is common among parents who prioritize children's needs over their own.",
+      "source": "Journal of Affective Disorders"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Marital problems cause all parental depression.",
+      "reality": "While stress affects relationships, depression has biological components and multiple causes.",
+      "source": "Family Process Journal"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "You don't need help if you're not suicidal.",
+      "reality": "Early intervention for mild-moderate depression prevents worsening and improves family outcomes.",
+      "source": "Preventive Medicine"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Exercise and diet alone can cure parental depression.",
+      "reality": "While lifestyle helps, clinical depression often requires professional treatment.",
+      "source": "JAMA Psychiatry"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Parental depression lasts only until the child improves.",
+      "reality": "Without treatment, depression can persist even as child makes progress.",
+      "source": "Development and Psychopathology"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Medication means you're too weak to handle parenting.",
+      "reality": "Taking medication for depression is no different than treating diabetes or high blood pressure.",
+      "source": "Mental Health America"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Only young parents get depressed about diagnoses.",
+      "reality": "Parents of all ages experience grief/anger about child's challenges regardless of their age.",
+      "source": "Journal of Family Issues"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Siblings don't notice parental depression.",
+      "reality": "Children are highly attuned to parental moods even when adults try to hide symptoms.",
+      "source": "Journal of Child and Family Studies"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Religious faith should prevent parental depression.",
+      "reality": "While faith can be a coping resource, it doesn't make people immune to biological depression.",
+      "source": "Psychology of Religion Journal"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Parents who sought the diagnosis can't be depressed about it.",
+      "reality": "Even parents who advocated for assessment experience grief about the confirmed diagnosis.",
+      "source": "Exceptional Parent Magazine"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Parental depression looks like constant sadness.",
+      "reality": "It often manifests as irritability, exhaustion, or emotional numbness rather than overt sadness.",
+      "source": "Journal of the American Academy of Child Psychiatry"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "You should be over the grief about the diagnosis within a year.",
+      "reality": "Grief resurfaces at developmental transitions (new schools, milestones peers reach); this is normal.",
+      "source": "Disability and Society"
+    },
+    {
+      "category": "Parental Depression",
+      "myth": "Happy moments mean the depression is gone.",
+      "reality": "Depression often involves capacity for joy amid persistent low mood or fatigue.",
+      "source": "Clinical Psychological Science"
+    },
+
+  {
+      "category": "Pregnancy Nutrition",
+      "myth": "You need to drink milk daily for baby's bones.",
+      "reality": "Calcium can come from various sources (leafy greens, fortified foods); milk isn't essential if you're lactose intolerant.",
+      "source": "NIH Office of Dietary Supplements"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Avoid all spicy food during pregnancy.",
+      "reality": "Spicy foods are safe unless they cause individual discomfort; they don't induce labor.",
+      "source": "American Pregnancy Association"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Prenatal vitamins replace the need for healthy eating.",
+      "reality": "Vitamins supplement but don't replace the benefits of whole foods and balanced nutrition.",
+      "source": "ACOG Nutrition Guidelines"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Eating peanuts causes peanut allergies in baby.",
+      "reality": "Unless you're allergic, eating peanuts during pregnancy may reduce baby's allergy risk.",
+      "source": "Journal of Allergy and Clinical Immunology"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Vegetarian diets can't support healthy pregnancies.",
+      "reality": "Well-planned vegetarian/vegan diets are safe with attention to protein, iron, B12, and DHA.",
+      "source": "Academy of Nutrition and Dietetics"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Avoid all sushi during pregnancy.",
+      "reality": "Cooked sushi and reputable-source raw fish (low mercury) are generally safe in moderation.",
+      "source": "FDA Seafood Guidelines"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "You must eat organic to have a healthy baby.",
+      "reality": "Conventional produce is safe when properly washed; what matters most is eating varied fruits/vegetables.",
+      "source": "Environmental Health Perspectives"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Avoid eggs due to salmonella risk.",
+      "reality": "Pasteurized eggs and fully cooked eggs are safe and excellent protein sources.",
+      "source": "CDC Food Safety Guidelines"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Herbal teas are always safe alternatives to coffee.",
+      "reality": "Some herbal teas (black cohosh, pennyroyal) are unsafe; stick to pregnancy-safe varieties like ginger or peppermint.",
+      "source": "Journal of Obstetric Medicine"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "You shouldn't gain weight in the first trimester.",
+      "reality": "While some lose weight from nausea, 1-5lb gain is normal; underweight women may need more.",
+      "source": "IOM Pregnancy Weight Guidelines"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Artificial sweeteners cause birth defects.",
+      "reality": "FDA-approved sweeteners (aspartame, sucralose) are safe in moderation except saccharin.",
+      "source": "American Journal of Clinical Nutrition"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Eating liver provides iron for pregnancy.",
+      "reality": "Liver's high vitamin A content makes it risky; choose other iron sources like lentils and lean meats.",
+      "source": "British Journal of Nutrition"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "You must force yourself to eat when nauseous.",
+      "reality": "Small, frequent bland snacks are better than forcing large meals when experiencing morning sickness.",
+      "source": "Journal of Midwifery & Women's Health"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Avoid all soft cheeses.",
+      "reality": "Pasteurized soft cheeses (most US products) are safe; only unpasteurized varieties carry listeria risk.",
+      "source": "FDA Cheese Safety Guidelines"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Pregnancy cravings indicate nutritional deficiencies.",
+      "reality": "Cravings are more likely hormonal; unusual cravings (pica) should be discussed with a doctor.",
+      "source": "Appetite Journal"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "You can't eat any deli meats.",
+      "reality": "Heating deli meats until steaming kills listeria bacteria, making them safe to eat.",
+      "source": "CDC Listeria Prevention"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Avoid soy products during pregnancy.",
+      "reality": "Moderate soy consumption is safe and provides quality plant-based protein.",
+      "source": "Journal of Nutrition"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "Salty foods cause preeclampsia.",
+      "reality": "Salt restriction doesn't prevent preeclampsia; adequate intake is important for blood volume expansion.",
+      "source": "Hypertension Journal"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "All raw vegetables are unsafe.",
+      "reality": "Properly washed raw veggies are safe and provide important nutrients; avoid only pre-cut varieties with higher contamination risk.",
+      "source": "Food Safety During Pregnancy"
+    },
+    {
+      "category": "Pregnancy Nutrition",
+      "myth": "You must drink 8 glasses of water daily.",
+      "reality": "Hydration needs vary; pale urine and thirst are better indicators than fixed amounts.",
+      "source": "ACOG Patient Education"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Vaccines cause autism.",
+      "reality": "Extensive research shows no link between vaccines and autism; the original study claiming this was fraudulent.",
+      "source": "CDC Vaccine Safety"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "All autistic people have savant skills.",
+      "reality": "Only about 10% of autistic individuals show savant abilities; most have typical skill ranges.",
+      "source": "Journal of Autism and Developmental Disorders"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism can be outgrown.",
+      "reality": "Autism is lifelong though symptoms may change with development and intervention.",
+      "source": "Autism Research Institute"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Poor parenting causes autism.",
+      "reality": "Autism is a neurodevelopmental disorder with strong genetic/biological origins.",
+      "source": "National Institute of Mental Health"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autistic people lack empathy.",
+      "reality": "Many autistic individuals experience deep empathy but may express it differently.",
+      "source": "Autism Science Foundation"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "All autistic people are nonverbal.",
+      "reality": "Verbal abilities vary widely; many autistic individuals are highly verbal.",
+      "source": "Journal of Speech and Hearing Research"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism only affects boys.",
+      "reality": "Girls are underdiagnosed but autism occurs in all genders at an estimated 3:1 male-to-female ratio.",
+      "source": "Autism in Girls Research"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autistic people don't want friends.",
+      "reality": "Many desire social connections but struggle with conventional social norms.",
+      "source": "Autism Society"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Gluten-free diets cure autism.",
+      "reality": "No evidence supports GF diets as autism treatment unless celiac disease is present.",
+      "source": "Journal of Autism and Developmental Disorders"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "All autistic individuals have intellectual disability.",
+      "reality": "IQ ranges widely; many have average or above-average intelligence.",
+      "source": "Autism Speaks Research"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism is caused by screen time.",
+      "reality": "No credible evidence links screen exposure to autism development.",
+      "source": "JAMA Pediatrics"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "ABA therapy is the only effective treatment.",
+      "reality": "While ABA helps some, other approaches (speech therapy, OT, social skills training) are also evidence-based.",
+      "source": "National Autism Center"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autistic people can't work regular jobs.",
+      "reality": "With appropriate supports, many autistic adults are successful in diverse careers.",
+      "source": "Autism at Work Programs"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism rates are increasing due to environmental toxins.",
+      "reality": "Increased diagnoses reflect broader criteria and better awareness, not necessarily more cases.",
+      "source": "CDC Autism Data"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "All autistic children have meltdowns.",
+      "reality": "Behavioral challenges vary; many develop coping strategies with support.",
+      "source": "Autism Research Centre"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism can be diagnosed with a blood test.",
+      "reality": "Diagnosis relies on behavioral observation; no medical test exists yet.",
+      "source": "American Academy of Pediatrics"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autistic people don't understand humor.",
+      "reality": "Many enjoy and create humor, though preferences may differ from neurotypical peers.",
+      "source": "Journal of Autism Research"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism is a mental illness.",
+      "reality": "Autism is a neurological difference, not a mental health disorder.",
+      "source": "Autism Self-Advocacy Network"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "All autistic individuals need the same supports.",
+      "reality": "Needs vary widely - 'If you've met one person with autism, you've met one person with autism.'",
+      "source": "Autism Speaks"
+    },
+    {
+      "category": "Autism Spectrum",
+      "myth": "Autism is a modern condition.",
+      "reality": "Historical accounts describe individuals with autistic traits long before the diagnosis existed.",
+      "source": "Autism History Project"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculia just means being bad at math.",
+      "reality": "It's a specific learning disability affecting number sense and quantitative reasoning.",
+      "source": "National Center for Learning Disabilities"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "People with dyscalculia can't do any math.",
+      "reality": "With strategies and accommodations, many develop functional math skills.",
+      "source": "British Dyslexia Association"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculia is rare.",
+      "reality": "It affects 3-7% of the population, similar to dyslexia prevalence.",
+      "source": "Journal of Learning Disabilities"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "It only affects school math.",
+      "reality": "Impacts daily life (telling time, handling money, measuring quantities).",
+      "source": "Dyscalculia.org"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "More drill/practice will fix it.",
+      "reality": "Requires specialized instruction focusing on conceptual understanding.",
+      "source": "National Mathematics Advisory Panel"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculics can't have strong visual-spatial skills.",
+      "reality": "Many excel in visual arts/design despite number difficulties.",
+      "source": "Cognitive Development Journal"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "It's caused by math anxiety.",
+      "reality": "Anxiety is a result, not the cause, of the neurological difference.",
+      "source": "Frontiers in Psychology"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Only children have dyscalculia.",
+      "reality": "It persists into adulthood though coping strategies improve.",
+      "source": "Journal of Adult Development"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Calculators solve all problems.",
+      "reality": "Conceptual understanding is still needed to set up problems correctly.",
+      "source": "LD Online"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculia means low IQ.",
+      "reality": "It can occur across the full IQ range.",
+      "source": "Intelligence Journal"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "All math struggles indicate dyscalculia.",
+      "reality": "Diagnosis requires specific cognitive deficits, not just poor performance.",
+      "source": "Diagnostic and Statistical Manual (DSM-5)"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "It only affects arithmetic.",
+      "reality": "Also impacts understanding time, directions, sequences, and patterns.",
+      "source": "British Journal of Psychology"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculics can't manage money.",
+      "reality": "With tools and systems, many develop financial competence.",
+      "source": "National Numeracy Organization"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "It's the same as math dyslexia.",
+      "reality": "While related, dyscalculia specifically affects number sense, not just symbols.",
+      "source": "Journal of Neuroscience"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculia can't be diagnosed until school age.",
+      "reality": "Early signs (counting difficulties, quantity comparison) may appear by age 4.",
+      "source": "Developmental Science"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "All dyslexics have dyscalculia.",
+      "reality": "While co-occurrence is common (30-60%), they're distinct conditions.",
+      "source": "Annals of Dyslexia"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculics can't be good at science.",
+      "reality": "Many excel in qualitative sciences (biology, geology) despite math challenges.",
+      "source": "Science Education Journal"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "It's untreatable.",
+      "reality": "Early intervention can significantly improve number sense and math skills.",
+      "source": "Journal of Educational Psychology"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Dyscalculia is just a memory problem.",
+      "reality": "Involves core deficits in quantity representation and numerical processing.",
+      "source": "Trends in Cognitive Sciences"
+    },
+    {
+      "category": "Dyscalculia",
+      "myth": "Only boys have dyscalculia.",
+      "reality": "Affects both genders equally though boys are more often identified.",
+      "source": "Journal of Child Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Worrying means you care more as a parent.",
+      "reality": "Excessive worry impairs parenting effectiveness; calm presence is more beneficial.",
+      "source": "Journal of Child and Family Studies"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety is always about the child's safety.",
+      "reality": "Often includes social judgment fears ('What will others think of my parenting?').",
+      "source": "Anxiety and Depression Association"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Anxious parents always raise anxious children.",
+      "reality": "While risk increases, children can develop resilience with proper support.",
+      "source": "Developmental Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Only first-time parents experience significant anxiety.",
+      "reality": "Each child's unique needs can trigger new anxieties regardless of parenting experience.",
+      "source": "Journal of Family Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety will go away once the child reaches certain milestones.",
+      "reality": "New developmental stages often bring new worries; coping skills are lifelong needs.",
+      "source": "Parenting Science"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Anxiety makes parents more vigilant about real dangers.",
+      "reality": "Anxiety often focuses on unlikely risks while overlooking more probable concerns.",
+      "source": "Journal of Abnormal Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parents should never show anxiety in front of children.",
+      "reality": "Modeling healthy coping with anxiety ('I feel nervous but I can handle this') teaches resilience.",
+      "source": "Child Development Perspectives"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety is always irrational.",
+      "reality": "Some anxiety is proportionate (e.g., legitimate medical concerns); the issue is when it becomes impairing.",
+      "source": "Clinical Psychology Review"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Only mothers experience parenting anxiety.",
+      "reality": "Fathers experience comparable rates but are less likely to acknowledge or seek help.",
+      "source": "Journal of Affective Disorders"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Anxious parents should avoid discussing their worries.",
+      "reality": "Processing concerns with supportive adults (not children) often reduces anxiety.",
+      "source": "Family Process Journal"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parenting gets less anxiety-provoking as children get older.",
+      "reality": "While physical safety worries may decrease, social/emotional concerns often increase.",
+      "source": "Developmental Review"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety is always bad for children.",
+      "reality": "Mild anxiety can motivate protective behaviors; only excessive anxiety causes harm.",
+      "source": "Journal of Child Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parents of special needs children should expect constant anxiety.",
+      "reality": "While stress is higher, many develop resilience and find joy in their parenting journey.",
+      "source": "Journal of Autism and Developmental Disorders"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Anxiety means you're not cut out for parenting.",
+      "reality": "All parents experience some anxiety; it's how you manage it that matters.",
+      "source": "American Psychological Association"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety is always obvious.",
+      "reality": "Many high-functioning parents hide anxiety through perfectionism or over-preparation.",
+      "source": "Journal of Anxiety Disorders"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parenting classes will eliminate anxiety.",
+      "reality": "While helpful, clinical anxiety often requires targeted treatment beyond general education.",
+      "source": "Behavior Therapy"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Anxious parents can't set boundaries well.",
+      "reality": "Many anxious parents actually over-control; the challenge is finding balanced discipline.",
+      "source": "Journal of Clinical Child Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety peaks during infancy.",
+      "reality": "For many, anxiety increases as children gain independence in school-age years.",
+      "source": "Developmental Psychopathology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Medication is the only treatment for parental anxiety.",
+      "reality": "Cognitive-behavioral therapy and mindfulness are also evidence-based treatments.",
+      "source": "Journal of Consulting and Clinical Psychology"
+    },
+    {
+      "category": "Parental Anxiety",
+      "myth": "Parental anxiety means you love your child more.",
+      "reality": "Love isn't measured by worry; secure attachment comes from consistent care, not anxious vigilance.",
+      "source": "Attachment and Human Development"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations give unfair advantages.",
+      "reality": "They level the playing field by removing disability-related barriers.",
+      "source": "Individuals with Disabilities Education Act (IDEA)"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Extra time means unlimited time.",
+      "reality": "Standard is 50-100% additional time based on documented needs.",
+      "source": "College Board Accommodations"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations make students dependent.",
+      "reality": "Properly implemented, they foster independence by allowing demonstration of true capabilities.",
+      "source": "Journal of Learning Disabilities"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Only severe disabilities qualify.",
+      "reality": "Even mild impairments may warrant accommodations if they substantially limit functioning.",
+      "source": "Americans with Disabilities Act"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Private schools don't have to provide accommodations.",
+      "reality": "Those receiving federal funds must comply with Section 504 protections.",
+      "source": "U.S. Department of Education"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations are only for academics.",
+      "reality": "May include non-academic areas like lunch, recess, transportation, and extracurriculars.",
+      "source": "IDEA Part B Regulations"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Once granted, accommodations never change.",
+      "reality": "Should be reviewed annually as needs evolve with development.",
+      "source": "National Center for Learning Disabilities"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Teachers can refuse accommodations they disagree with.",
+      "reality": "Legally mandated accommodations aren't optional for educators.",
+      "source": "OCR Complaint Procedures"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations lower academic standards.",
+      "reality": "They maintain standards while changing how information is accessed/demonstrated.",
+      "source": "Council for Exceptional Children"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "All students with the same diagnosis need the same accommodations.",
+      "reality": "Must be individualized based on specific functional limitations.",
+      "source": "Journal of Special Education"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations are only for elementary school.",
+      "reality": "College and workplace accommodations continue protections into adulthood.",
+      "source": "ADA National Network"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Speech-to-text is cheating for writing assignments.",
+      "reality": "It's an accommodation for students whose ideas outpace handwriting/typing abilities.",
+      "source": "International Dyslexia Association"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Quiet rooms are unnecessary privileges.",
+      "reality": "For sensory-sensitive students, they're essential for equal assessment access.",
+      "source": "Autism Speaks School Toolkit"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations are only for cognitive disabilities.",
+      "reality": "Also cover physical, sensory, mental health, and chronic health conditions.",
+      "source": "Section 504 Regulations"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Extended deadlines mean no deadlines.",
+      "reality": "Structured flexibility (e.g., 2 extra days per assignment) maintains accountability.",
+      "source": "Landmark College Research"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations are expensive for schools.",
+      "reality": "Most (extended time, preferential seating, note-taking) require minimal resources.",
+      "source": "U.S. Government Accountability Office"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Gifted students don't need accommodations.",
+      "reality": "Twice-exceptional (2e) students need both enrichment and disability supports.",
+      "source": "National Association for Gifted Children"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Peer helpers replace professional supports.",
+      "reality": "While beneficial, peers can't substitute for trained specialists' services.",
+      "source": "Council for Learning Disabilities"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations must be written in an IEP.",
+      "reality": "504 Plans also provide legally binding accommodations without special education services.",
+      "source": "U.S. Department of Education"
+    },
+    {
+      "category": "School Accommodations",
+      "myth": "Accommodations guarantee academic success.",
+      "reality": "They remove barriers but don't eliminate need for effort and appropriate instruction.",
+      "source": "Journal of Educational Psychology"
+    }
+  ]
+}
+  

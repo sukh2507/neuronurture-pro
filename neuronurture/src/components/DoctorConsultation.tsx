@@ -57,7 +57,7 @@ const DoctorConsultation = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSpecialty, setSelectedSpecialty] = useState('');
   const [urgency, setUrgency] = useState('normal');
-  const [chatDoctor, setChatDoctor] = useState<Doctor | null>(null);
+const [chatDoctor, setChatDoctor] = useState<Doctor | null>(null);
   const motherId = localStorage.getItem("userId") ?? '';
   
   // Get unique specialties for filter
@@ -410,9 +410,9 @@ const DoctorConsultation = () => {
   variant="outline"
   className="flex-1"
   onClick={(e) => {
-  e.stopPropagation();
-  setChatDoctor(doctor); // <-- opens the modal
-}}
+    e.stopPropagation();
+    setChatDoctor(doctor); // Opens the modal
+  }}
 >
   Message
 </Button>
@@ -519,12 +519,15 @@ const DoctorConsultation = () => {
           </Card>
         </>
       )}
+      
       {chatDoctor && (
   <ChatModal
     doctorId={chatDoctor._id}
     doctorName={chatDoctor.fullName}
-    motherId={motherId}
+    isOpen={!!chatDoctor}
     onClose={() => setChatDoctor(null)}
+    currentUserRole="mother"  // Since this is used by mothers
+    // motherId is not needed here since it will be fetched from localStorage
   />
 )}
 

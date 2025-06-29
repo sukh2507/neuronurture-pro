@@ -64,11 +64,99 @@ const ChildScreening = ({ children = [] }: ChildScreeningProps) => {
   ];
 
   
-  const handleGameComplete = (gameId: string, results: any) => {
-    console.log(`Game ${gameId} completed with results:`, results);
-    // Here you would send results to backend
-    setSelectedGame(null);
-  };
+const handleGameComplete = async (gameId: string, results: any) => {
+  console.log('=== FRONTEND DEBUG ===');
+  console.log(`Game ${gameId} completed with results:`, results);
+  
+  try {
+    const childId = children?.[0]?._id;
+    console.log('Child ID:', childId);
+    
+    if (!childId) {
+      console.error('No child ID available');
+      alert('Error: No child ID available');
+      return;
+    }
+
+    // Map gameId to the database field names
+    const gameTypeMapping = {
+      'memory': 'memoryMatch',
+      'color': 'colorPattern', 
+      'pattern': 'shapeSequence',
+      'reading': 'wordAdventure'
+    };
+
+    const gameType = gameTypeMapping[gameId];
+    console.log('Mapped game type:', gameType);
+    
+    if (!gameType) {
+      console.error('Invalid game type:', gameId);
+      alert('Error: Invalid game type');
+      return;
+    }
+
+    // Structure the request body correctly
+    const requestBody = {
+      gameType: gameType,
+      gameData: results
+    };
+    
+    console.log('Request body:', requestBody);
+
+    // Get token with multiple fallback options
+    const token = localStorage.getItem('token') || 
+                 localStorage.getItem('authToken') ||
+                 sessionStorage.getItem('token') ||
+                 sessionStorage.getItem('authToken');
+    console.log('Token available:', !!token);
+
+    if (!token) {
+      console.error('No authentication token found');
+      alert('Error: Not authenticated. Please login again.');
+      return;
+    }
+
+    // FIXED: Use full backend URL
+    const baseUrl = import.meta.env.VITE_BACKEND_PORT || 'http://localhost:5000';
+    const url = `${baseUrl}/api/child/screening/${childId}`;
+    console.log('Request URL:', url);
+
+    // Send the screening result to backend
+    const response = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    console.log('Response status:', response.status);
+    console.log('Response ok:', response.ok);
+
+    const data = await response.json();
+    console.log('Response data:', data);
+    
+    if (response.ok) {
+      console.log('✅ Screening result saved successfully:', data);
+      alert(`${gameType} result saved successfully! Total games completed: ${Object.keys(data.child.screening || {}).length}`);
+      
+      // IMPROVEMENT: Show which games have been completed
+      const completedGames = Object.keys(data.child.screening || {});
+      console.log('All completed games:', completedGames);
+      
+    } else {
+      console.error('❌ Failed to save screening result:', data);
+      alert(`Failed to save result: ${data.message || 'Unknown error'}`);
+    }
+    
+  } catch (error) {
+    console.error('❌ Error saving screening result:', error);
+    alert(`Error: ${error.message || 'Network error occurred'}`);
+  }
+  
+  setSelectedGame(null);
+};
 
   if (selectedGame) {
     const game = games.find(g => g.id === selectedGame);

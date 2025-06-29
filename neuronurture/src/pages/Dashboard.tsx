@@ -16,6 +16,8 @@ import DoctorConsultation from '@/components/DoctorConsultation';
 import NeuroAIChat from '@/components/NeuroAIChat';
 import ReportsView from '@/components/doctordashboard/ReportsView';
 import MaternalSelfReports from '@/components/MaternalSelfReports';
+import MythsPage from './MythsPage';
+import MythRealityViewer from '@/components/MythRealityViewer';
 const baseUrl = import.meta.env.VITE_BACKEND_PORT;
 
 
@@ -179,12 +181,14 @@ const Dashboard = () => {
     { id: 'overview', label: 'Overview', icon: Heart },
     { id: 'mood', label: 'Mood Tracking', icon: Heart },
     { id: 'screening', label: 'Child Screening', icon: Brain },
-    { id: 'timeline', label: 'Timeline', icon: Calendar },
+    // { id: 'timeline', label: 'Timeline', icon: Calendar },
     { id: 'forum', label: 'Community', icon: MessageSquare },
     { id: 'profile', label: 'Profile', icon: User },
     { id: 'consultation', label: 'Consult Doctors', icon: User },
     { id: 'neuroai', label: 'Ask NeuroAI', icon: Brain },
     { id: 'reports', label: 'Reports', icon: Users },
+    { id: 'Mythreality', label: 'Mythreality', icon: Brain },
+
   
   ];
 
@@ -215,6 +219,8 @@ const renderContent = () => {
       return <MaternalSelfReports motherId={motherProfile._id} />;
     case 'neuroai':
       return <NeuroAIChat motherProfile={motherProfile} />;
+    case 'Mythreality':
+      return <MythRealityViewer/>;
     default:
       return (
         <DashboardOverview 
@@ -329,20 +335,15 @@ const DashboardOverview = ({ motherProfile, children, loading, averageMood, tota
         </Card>
 
         <Card className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
-  <CardContent className="p-6 flex flex-col items-center gap-4">
-    <Button
-      // onClick={handleGenerateMotherReport} // define this function
-      className="w-[126%] text-sm bg-white text-purple-700 font-semibold hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500"
-    >
-      Generate Mother Health Report
-    </Button>
-    <Button
-      // onClick={handleGenerateChildReport} // define this function
-      className="w-[126%] bg-white text-purple-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500 font-semibold hover:bg-gray-100"
-    >
-      Generate Child Screening Report
-    </Button>
-  </CardContent>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-purple-100">Screenings</p>
+                <p className="text-3xl font-bold">{totalScreenings}</p>
+              </div>
+              <Brain className="h-8 w-8" />
+            </div>
+          </CardContent>
         </Card>
 
 
@@ -353,7 +354,8 @@ const DashboardOverview = ({ motherProfile, children, loading, averageMood, tota
                 <p className="text-blue-100">Check-ins</p>
                 <p className="text-3xl font-bold">{totalCheckIns}</p>
               </div>
-              <Calendar className="h-8 w-8" />
+              <Brain className="h-8 w-8" />
+
             </div>
           </CardContent>
         </Card>
