@@ -21,36 +21,21 @@ const messageRoutes = require('./routes/messages');
 
 // Initialize app and server
 const app = express();
-const server = http.createServer(app);
+const server = http.createServer(app); // 🔥 Replace app.listen with this
 
 // Connect to MongoDB
 connectDB();
 
-// CORS Setup
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:8080',
-  'https://neuronurture-pro.vercel.app'
-];
-
+// Middlewares
+app.use(express.json());
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.warn(`❌ Blocked CORS request from: ${origin}`);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: ['http://localhost:3000', 'http://localhost:8080','https://neuronurture-pro.vercel.app/'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Middlewares
-app.use(express.json());
-
-// Request logging
+// Request logging middleware
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
   console.log('Headers:', req.headers);
@@ -58,11 +43,6 @@ app.use((req, res, next) => {
     console.log('Body:', req.body);
   }
   next();
-});
-
-// Health Check
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
 });
 
 // Routes
@@ -78,9 +58,9 @@ app.use('/api/consultation', consultationroutes);
 app.use('/api/neuroai', chatroutes);
 app.use('/api/users', userRoutes);
 app.use('/api/myths', mythRealityRoutes);
-app.use('/api/messages', messageRoutes);
+app.use('/api/messages',messageRoutes)
 
-// Error handler
+// Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
@@ -94,15 +74,16 @@ app.use('*', (req, res) => {
 // Socket.IO Setup
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins,
+    origin: ['http://localhost:3000', 'http://localhost:8080','https://neuronurture-pro.vercel.app/'],
     methods: ['GET', 'POST']
   }
 });
 
-// Server startup
+
+// Start server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Server running on port ${PORT}`);
-  console.log(`✅ MongoDB URI: ${process.env.MONGODB_URI || 'mongodb://localhost:27017/neuronurture'}`);
-  console.log('✅ CORS enabled for:', allowedOrigins);
+  console.log(` Server running on port ${PORT}`);
+  console.log(`MongoDB URI: ${process.env.MONGODB_URI || 'mongodb://localhost:27017/neuronurture'}`);
+  console.log('CORS enabled for:', ['http://localhost:3000', 'http://localhost:8080','https://neuronurture-pro.vercel.app/']);
 });
